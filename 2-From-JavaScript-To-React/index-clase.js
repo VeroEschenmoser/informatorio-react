@@ -20,9 +20,14 @@ request
       const specie = document.createElement('p')
       specie.textContent = `Especie: ${character.species}`
 
+      const eliminar= document.createElement("button")
+      eliminar.textContent= "eliminar"
+      
       app.appendChild(container)
       container.appendChild(name)
       container.appendChild(specie)
       container.appendChild(image)
+      container.appendChild(eliminar)
+      eliminar.addEventListener("click", ()=> app.removeChild(container))
     })
   })
